@@ -1,0 +1,13 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="bit-by-bit"></Label>
+</ActionBar>
+
+<DockLayout class="content-wrapper" stretchLastChild="true">
+    <StackLayout dock="bottom">
+        <bottom-navigation></bottom-navigation>
+    </StackLayout>
+    <StackLayout>
+        <Button class="back-button" text="back" [nsRouterLink]="['/dashboard']"></Button>
+    </StackLayout>
+</DockLayout>
+

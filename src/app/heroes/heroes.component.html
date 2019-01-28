@@ -1,0 +1,35 @@
+<ActionBar class="action-bar">
+  <Label class="action-bar-title" text="bit-by-bit"></Label>
+  <SearchBar id="searchBar" hint="Search for a hero" [text]="searchPhrase" (textChange)="onTextChanged($event)" (submit)="onSubmit($event)" 
+            color="white" textFieldBackgroundColor="peachpuff" textFieldHintColor="white"></SearchBar>
+</ActionBar>
+
+<DockLayout class="content-wrapper" stretchLastChild="true">
+  <StackLayout dock="bottom">
+      <bottom-navigation></bottom-navigation>
+  </StackLayout>
+  <ScrollView orientation="vertical">
+      <StackLayout>
+      <Button *ngIf="isAndroid" class="back-button" text="back" [nsRouterLink]="['/dashboard']"></Button>
+      <Label class="heading">
+        <FormattedString>
+          <Span text="Feel " color="#8B668B"></Span>
+          <Span text="free " color="#8B7B8B" fontAttributes="Bold"></Span>
+          <Span text="to " color="#9F5F9F"></Span>
+          <Span text="tap " color="#D8BFD8"></Span>
+          <Span text="a " color="#D3BECF"></Span>
+          <Span text="card" color="#EEE0E5"></Span>
+          <Span text="!" color="#8B4789"></Span>
+        </FormattedString>
+      </Label>
+      <FlexboxLayout flexWrap="wrap" class="dashboard">
+          <Button
+            *ngFor="let hero of heroes"
+            text="{{ hero.name }}"
+            [nsRouterLink]="['/details/', hero.id]"
+            class="dashboard__item"
+          ></Button>
+      </FlexboxLayout>
+      </StackLayout>
+    </ScrollView>
+</DockLayout>

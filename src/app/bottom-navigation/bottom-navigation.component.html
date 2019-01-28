@@ -1,0 +1,19 @@
+<StackLayout>
+    <GridLayout class="bottom-bar" height="60" verticalAlignment="bottom">
+        <GridLayout columns="*, *, *, *" height="60" class="bottom-background">
+            <GridLayout #tabHighlight col="0" backgroundColor="#F8A200"></GridLayout>
+            <GridLayout col="0" (tap)="selectTab(0)">
+            <Label col="0" text="HOME" class="bottom-navigation-tab" [nsRouterLink]="['../dashboard']"></Label>
+            </GridLayout>
+            <GridLayout col="1" (tap)="selectTab(1)">
+            <Label col="1" text="HEROES" class="bottom-navigation-tab" [nsRouterLink]="['../heroes']"></Label>
+            </GridLayout>
+            <GridLayout col="2" (tap)="selectTab(2)" >
+            <Label col="2" text="VILLAINS" class="bottom-navigation-tab" [nsRouterLink]="['../antiheroes']"></Label>
+            </GridLayout>
+            <GridLayout col="3" (tap)="selectTab(3)" >
+            <Label col="3" text="MAYBES" class="bottom-navigation-tab" [nsRouterLink]="['../maybes']"></Label>
+            </GridLayout>
+        </GridLayout>
+    </GridLayout>
+</StackLayout>

@@ -1,0 +1,15 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="bit-by-bit"></Label>
+</ActionBar>
+
+<DockLayout stretchLastChild="true">
+    <StackLayout dock="bottom">
+        <bottom-navigation></bottom-navigation>
+    </StackLayout>
+    <StackLayout>
+        <LottieView width="100" height="120" [src]="srcA" [loop]="loop" [autoPlay]="autoPlay" (loaded)="lottieViewLoaded($event)"></LottieView>
+        <LottieView width="100" height="120" [src]="srcB" [loop]="loop" [autoPlay]="autoPlay" (loaded)="lottieViewLoaded($event)"></LottieView>
+        <LottieView width="100" height="120" [src]="srcC" [loop]="loop" [autoPlay]="autoPlay" (loaded)="lottieViewLoaded($event)"></LottieView>
+        <LottieView width="100" height="100" [src]="srcD" [loop]="loop" [autoPlay]="autoPlay" (loaded)="lottieViewLoaded($event)"></LottieView>
+    </StackLayout>
+</DockLayout>

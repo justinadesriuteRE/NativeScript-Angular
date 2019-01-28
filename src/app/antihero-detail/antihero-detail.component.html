@@ -1,0 +1,16 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="bit-by-bit"></Label>
+  </ActionBar>
+
+  <DockLayout class="content-wrapper" stretchLastChild="true">
+      <StackLayout dock="bottom">
+        <Button text="back" [nsRouterLink]="['/heroes']" class="back-button"></Button>
+      </StackLayout>
+    <ScrollView orientation="vertical">
+      <StackLayout xclass="layoutBackgroundImageFromFolder">
+        <Button class="hero-tab" text="{{ antihero.name }}" [nsRouterLink]="['/antiheroes']"></Button>
+        <Button class="hero-tab" text="no. {{ antihero.id }}" [nsRouterLink]="['/antiheroes']"></Button>
+        <Button class="hero-tab" text="logo: {{ antihero.logo }}" [nsRouterLink]="['/antiheroes']"></Button>
+      </StackLayout>
+  </ScrollView>
+</DockLayout>

@@ -1,0 +1,19 @@
+<ActionBar class="action-bar">
+  <Label class="action-bar-title" text="bit-by-bit"></Label>
+</ActionBar>
+
+<DockLayout class="content-wrapper" stretchLastChild="true">
+  <StackLayout dock="bottom">
+    <bottom-navigation></bottom-navigation>
+  </StackLayout>
+  <ScrollView orientation="vertical">
+    <StackLayout>
+      <Label class="heading" text="WELCOME"></Label>
+      <Label class="heading" text="to"></Label>
+      <Label class="heading" text="NS+Angular demo!"></Label>
+      <!-- <Label #label (loaded)="animate(label)" text="catch me!" color="white" width="80" height="40" textAlignment="center" backgroundColor="White"
+      borderRadius="2" fontSize="16"></Label> -->
+      <Button class="back-button" text="click me" [nsRouterLink]="['/animation']"></Button>
+    </StackLayout>
+  </ScrollView>
+</DockLayout>
